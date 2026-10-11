@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [1,2,3,4,5,6,7,8,9,10];
+
+        document.write(a);
+        document.write("<br/>");
+
+        a.push(8);
+        document.write("push : "+a+"</br>")
+
+        document.write(a.pop()+"</br>")
+        document.write("pop : "+a+"</br>")
+
+        a.shift() // Removes the first element from an array and returns it.
+        document.write("shift :"+a+"</br>") // Original array is modified.
+
+        a.unshift(5) // Adds one or more elements at the beginning of an array.
+        document.write("unshift :"+a+"</br>")
+
+        let result = a.splice(0,4,2);// i=0 to i=k-1 particlure string
+        document.write("splice : "+result+"</br>")
+        //Purpose: Adds, removes, or replaces elements in an array.
+        //Important: It changes the original array.
+        // array.splice(start, deleteCount, item1, item2, ...);
+        // start → Index to start from.
+        // deleteCount → Number of elements to remove.
+        // item1, item2 → Elements to insert.
+
+
+        let ans =a.slice(0,4)//return new array
+         document.write("slice : "+ans+"</br>")
+        //  Purpose: Copies a portion of an array into a new array.
+        //  Important: It does not change the original array.
+
+         document.write("sort "+a.sort()+"</br>")
+         document.write("reverse : "+a.reverse());
+
+
+    </script>
+</body>
+</html>

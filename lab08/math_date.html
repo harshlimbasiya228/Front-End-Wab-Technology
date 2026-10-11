@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a =parseInt (prompt("enter a value of a:"));
+        //  let b =parseInt (prompt("enter a value of b:"));
+        //   let c = parseInt (prompt("enter a value of c :"))
+        //  console.log("max:"+Math.max(a,b));
+        //   console.log("min:"+Math.min(a,b));
+        //    console.log("abs:"+Math.abs(c));
+
+        //  let arr = [10,30,20,60,40];
+        //  let ab = Math.max(arr)
+        //  console.log(ab); //Nan
+         
+       // random number genrate
+        // let dice = Math.floor(Math.random()*6+1);
+        // console.log("dice number :"+dice);
+
+        // console.log("flor :"+Math.floor(4.32));
+        // console.log("ceil :"+Math.ceil(7.69));
+        // console.log("round :"+Math.round(5.6945));
+        // console.log("truncat :"+Math.trunc(45.548))
+
+        // curent date and time 
+
+        let d = new Date();
+        console.log("date : "+d.getDate());
+        console.log("day : "+d.getDay());
+        console.log("year : "+d.getFullYear());
+        console.log("month : "+(d.getMonth()+1));
+         console.log("hour : "+d.getHours());
+        console.log("min : "+d.getMinutes());
+        console.log("secound : "+d.getSeconds());
+
+        //calculate age
+         // calculte age of 
+        let dob = new Date("2007-02-28");
+        let today = new Date();
+        let age = today.getFullYear()-dob.getFullYear();
+        if((today.getMonth() < dob.getMonth()) || today.getMonth()==dob.getMonth()){
+            age--;
+        }
+        console.log("age : "+age)
+
+        //cal to height
+        ans=Math.tan(Math.PI*50/180);
+        dis=200
+        console.log(dis/ans);
+
+        //difital clock
+        // function clock_1(){
+        //     let d1 = new Date()
+        //     document.write(d1.getTime()+"</br>");
+        // }
+        // setInterval(clock_1,2000);
+
+        //coundowm for next year
+    //    function next_count(){
+    //      let don1 = new Date("2027-01-1");
+    //     let today1 = new Date();
+    //     let current = don1-today1.getDay();
+         
+    //     document.write(current+"</br>");
+    //    }
+    //   setInterval(next_count,1000);
+
+    let pass = parseInt (prompt("enter a length+1 of password"))
+    let d3 = Math.floor((Math.random()*6)*(Math.pow(10,pass)));
+    document.write(d3)
+
+     let ch_pass = parseInt (prompt("enter a length of password"))
+     
+    </script>
+</body>
+</html>

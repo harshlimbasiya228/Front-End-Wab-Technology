@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        stu1={
+            name:'harsh',
+            id:1203,
+            age:19,
+            department:'CSE',
+            batch:'3A-2',
+            spis:[8.68,9.0]
+        };
+        stu2={
+            name:'virat',
+            id:1202,
+            age:20,
+            department:'CSE',
+            batch:'5A-2',
+            spis:[3.7,6.0]
+        };
+        teach=[stu1,stu2];
+        s1=teach[0].spis[1]
+        s2=teach[0].spis[0]
+        cpi=(s1+s2)/2
+        console.log("cpi "+cpi);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #handle{
+        height: 300px;
+        width: auto;
+        background-color: antiquewhite;
+        color: red;
+        font-family: cursive;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="handle">
+
+    </div>
+    <script>
+        let temp = document.getElementById("handle");
+         temp.addEventListener("click",()=>{
+        temp.innerHTML="left click";
+           
+        })
+        temp.addEventListener("contextmenu",(e)=>{
+            e.preventDefault();
+             temp.innerHTML="right click";
+        })
+       
+    </script>
+</body>
+</html>

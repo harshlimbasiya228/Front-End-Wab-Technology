@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: absolute;
+            color: rgb(19, 19, 19);
+            height: 100px;
+            width: 100px;
+            border:solid orange 2px;
+             animation-name: animi;
+             animation-duration: 2s;
+             animation-iteration-count: infinite;
+        }
+        .box2{
+            position: relative;
+            color: rgb(167, 238, 25);
+            height: 100px;
+            width: 100px;
+            border:solid orange 2px;
+             animation-name: animi2;
+             animation-duration: 2s;
+             animation-iteration-count: infinite;
+             margin-top: 75px;
+        }
+        .box3{
+            background-color: blueviolet;
+            position: relative;
+             height: 100px;
+            width: 100px;
+             animation-name: animi3;
+             animation-duration: 5s;
+             animation-iteration-count: infinite;
+             animation-direction: reverse;
+             margin-top: 75px;
+
+        }
+        .box4{
+            background-color: blueviolet;
+            position: relative;
+             height: 100px;
+            width: 100px;
+             animation-name: animi4;
+             animation-duration: 5s;
+             animation-iteration-count: infinite;
+             animation-direction: reverse;
+             margin-top: 75px;
+             animation-timing-function: ease-in-out;
+        }
+        @keyframes animi {
+            from{
+                background-color: red;
+            }
+            to{
+               background-color: yellow;
+            }
+            
+        }
+        @keyframes animi2 {
+            0%{
+                top:0px;
+                left: 0px;
+            }
+            25%{
+                top: 0px;
+                left: 50px;
+            }
+            50%{
+               top: 50px;
+               left: 50px;
+            }
+            75%{
+                top: 50px;
+                left: 0px;
+            }
+            100%{
+                top: 0px;
+               left: 0px;
+            }
+        }
+        @keyframes animi3 {
+             0%{
+                top:0px;
+                left: 0px;
+            }
+            25%{
+                top: 0px;
+                left: 50px;
+            }
+            50%{
+               top: 50px;
+               left: 50px;
+            }
+            75%{
+                top: 50px;
+                left: 0px;
+            }
+            100%{
+                top: 0px;
+               left: 0px;
+            }
+        }
+            @keyframes animi4 {
+             0%{
+                top:0px;
+                left: 0px;
+            }
+            25%{
+                top: 0px;
+                left: 50px;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h4>A</h4>
+    <div class="box">
+    </div><br><br><br><br>
+   <h4>B</h4>
+<div class="box2"></div>
+<h4>C</h4>
+<div class="box3">
+</div>
+<h4>E</h4>
+<div class="box4">
+
+</div>
+</body>
+</html>

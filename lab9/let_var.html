@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 40;
+        function check(){
+            let x = 60;
+            console.log("inside function block : "+x);
+        }
+         console.log("outside function block : "+x);
+         check();
+
+         function check1(){
+           var  x = 20;
+            console.log("inside function check1 :"+x);
+         }
+         console.log("outside function check1:"+x);
+         check1();
+        
+            // const z = 28;
+            // z=20;
+            // console.log("z : "+z);
+            
+    </script>
+</body>
+</html>

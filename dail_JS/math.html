@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a= parseInt (prompt("enter a value of a : "));
+        // let b = parseInt (prompt("enter a value of b : "));
+        // let c =  parseInt (prompt("enter a value of c : "));
+        // console.log("max : "+Math.max(a,b,c));
+        // console.log("min : "+Math.min(a,b,c));
+        // console.log("absolute value : "+Math.abs(c));
+
+        //random number genrate
+        // let dice = Math.floor(Math.random()*6)+1;
+        // console.log("dice number :"+dice);
+        
+        //flor,ceiling,round,truncat
+
+        // let num = 17.35;
+        // console.log("flor : "+Math.floor(num));
+        // console.log("ceil : "+Math.ceil(num));
+        // console.log("round : "+Math.round(num));
+        //  console.log("truncat : "+Math.trunc(num)); // return only int part
+
+        // curent date and time 
+
+        // let d = new Date();
+        // console.log("date : "+d.getDate());
+        // console.log("day : "+d.getDay());
+        // console.log("year : "+d.getFullYear());
+        // console.log("month : "+d.getMonth()+1);
+        // console.log("hour : "+d.getHours());
+        // console.log("min : "+d.getMinutes());
+        // console.log("secound : "+d.getSeconds());
+       
+        // calculte age of 
+        let dob = new Date("2007-02-28");
+        let today = new Date();
+        let age = today.getFullYear()-dob.getFullYear();
+        if((today.getMonth() < dob.getMonth()) || today.getMonth()==dob.getMonth()){
+            age--;
+        }
+        console.log("age : "+age)
+
+    </script>
+</body>
+</html>

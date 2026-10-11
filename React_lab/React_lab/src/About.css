@@ -1,0 +1,170 @@
+.title{
+            background-color: #e63946;
+            color: white;
+            height: 10vh;
+        }
+        .navigation a{
+             color: #006400;
+             text-decoration: none; 
+        }
+        .navigation a:hover{
+             color: white;
+        }
+        .navigation button{
+             height: 4vh;
+             border-radius: 15px;
+             background: linear-gradient(#ff9500,#e85d04,#ffba08);
+             border: 2px solid rgb(245, 182, 9);
+        }
+        .navigation hr{
+            border: 2px solid orange;
+        }
+        .main{
+             background-color: #f1faee;
+             margin: -15px 0px -16px 0px;
+        }
+        .history h2{
+             color: #03357b;
+             font-family:fantasy ;
+        }
+        .history p{
+             color: #044aac;
+        }
+        .culture h2{
+            color: #03357b;
+            font-family:fantasy ;
+        }
+        .culture p{
+             color: #2876e4;
+        }
+        .climate h2{
+              color: #03357b;
+            font-family:fantasy ;
+        }
+        .climate h3{
+             color:#9d4edd;
+             font-family: cursive;
+        }
+        .firsttable h4{
+             color:#0f8ef5;
+             font-family: cursive;
+             text-align: center;
+        }
+        .firsttable table{
+          background-color: #a8dadc;
+          border-radius: 10px;
+          margin-bottom: 15px;
+
+        }
+        .firsttable table:hover{
+            color: rgb(35, 68, 252);
+            transition: all 1s;
+        }
+        .secoundtable h4{
+             color:#0f8ef5;
+             font-family: cursive;
+             text-align: center;
+        }
+        .secoundtable table{
+          background-color: #a8dadc;
+          border-radius: 10px;
+          margin-bottom: 15px;
+        }
+        .secoundtable table:hover{
+            color: rgb(35, 68, 252);
+            transition: all 1s;
+        }
+        .north h3{
+             color:#9d4edd;
+             font-family: cursive;
+        }
+        .upcla h4{
+             color:#0f8ef5;
+             font-family: cursive;
+             text-align: center;
+        }
+        .upcla table{
+          background-color: #a8dadc;
+          border-radius: 10px;
+          margin-bottom: 15px;
+        }
+        .upcla table:hover{
+            color: rgb(35, 68, 252);
+            transition: all 1s;
+        }
+        .fact h2{
+            color: #03357b;
+            font-family:fantasy ;
+        }
+        .fact p{
+             color: #2876e4;
+        }
+        .fact ul{
+            color: #1772f3;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        }
+        .returnlink{
+            background-color: #669bbc;
+        }
+        .returnlink a{
+            color: white;
+        }
+        .returnlink a:hover{
+            color: rgb(230, 242, 57);
+        }
+        .returnlink hr{
+            border: 2px solid #ad0feb;
+        }
+        .footer{
+            background-color: #5dccc6;
+            margin-top: -14px;
+        }
+        .footer p{
+            color: #e0e1dd;
+        }
+        .footer p:hover{
+             color: #780000;
+      text-shadow: 10px 10px 14px #4ef3b9;
+      transition: all 1s;
+        }
+        .footer a{
+            color: red;
+        }
+        .footer a:hover{
+            color: #0f8ef5;
+        }
+     @media screen and (max-width:668px) {
+      img{
+        max-width: 100%;
+        height: auto;
+        width: 90%;
+      }
+     .navigation nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+     }
+     .navigation button{
+      height: auto;
+      width: 50%;
+      padding: 8px 20px;
+      font-size: 16px;
+     }
+     .title{
+      height: auto;
+      padding-bottom: 10px;
+     }
+     .firsttable table{
+        margin: 20px;
+        font-size: 16px;
+     }
+     .secoundtable table{
+        margin: 20px;
+        font-size: 16px;
+     }
+     .upcla table{
+        margin: 20px;
+        font-size: 16px;
+     }    
+    }

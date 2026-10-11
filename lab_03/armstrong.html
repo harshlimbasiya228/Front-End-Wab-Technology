@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt (prompt("enter a value of n :"))
+        let sum=0
+        let res,count=0
+        let orignal=n
+       let temp=n
+       while(orignal!=0){
+       
+        orignal = parseInt(orignal/10)
+        count++
+       }
+        while(n>0){
+            let digit = n%10
+            sum1=1
+            for(let i=1;i<=count;i++){
+                 sum1 = sum1 * (digit)
+                 
+            }
+           sum = sum1 + sum
+            n = parseInt(n/10)
+        }
+        if(temp==sum){
+            document.write("armstromg number")
+        }else{
+            document.write("Not armstrong number")
+        }
+    </script>
+</body>
+</html>

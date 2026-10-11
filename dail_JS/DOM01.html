@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myDiv {
+        height: 200px;
+        background: rgb(255, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="changeBG()">Click</button>
+    <div id="myDiv"></div>
+    <script>
+      function changeBG() {
+        md = document.getElementById("myDiv");
+        rColor = Math.floor(Math.random() * 255);
+        gColor = Math.floor(Math.random() * 255);
+        bColor = Math.floor(Math.random() * 255);
+        md.style.background = `rgb(${rColor},${gColor},${bColor})`;
+      }
+    //   <span id="result">0</span>
+    // <img onclick="changeLocation()" id="myImg" src="../AVB.jpg" height="50px" />
+    // <script>
+    //   function changeLocation() {
+    //     mi = document.getElementById("myImg");
+    //     mr = document.getElementById("result");
+    //     mr.innerHTML = parseInt(mr.innerHTML) + 1;
+    //     leftPos = Math.floor(Math.random() * (screen.availWidth - 200));
+    //     topPos = Math.floor(Math.random() * (screen.availHeight - 200));
+    //     mi.style.left = leftPos + "px";
+    //     mi.style.top = topPos + "px";
+    //   }
+    </script>
+  </body>
+</html>

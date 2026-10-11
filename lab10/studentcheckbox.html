@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+        <h1>select roll no</h1>
+        <div class="all_checkbox">
+            <label><input type="checkbox"class="check" value="101">101 </label></div>
+             <label><input type="checkbox"class="check" value="102">102 </label></div><br>
+              <label><input type="checkbox"class="check" value="103">103 </label></div><br>
+               <label><input type="checkbox"class="check" value="104">104 </label></div><br>
+                <label><input type="checkbox"class="check" value="105">105 </label></div><br>
+                 <label><input type="checkbox"class="check" value="106">106 </label></div><br>
+        </div>
+        <p>selected roll no:<span id="display"></span></p>
+    <script>
+        let checkboxes = document.getElementsByClassName("check");
+        let discheck = document.getElementById("display");
+        updatetext = () =>{
+            student=[];
+            for(let i=0;i<checkboxes.length;i++){
+                if(checkboxes[i].checked===true){
+                    student.push(checkboxes[i].value);
+                }
+            }
+            discheck.innerHTML=student.join(', ');
+        };
+        for(let i=0;i<checkboxes.length;i++){
+            checkboxes[i].addEventListener('change',updatetext)
+        }
+    </script>   
+    
+</body>
+</html>

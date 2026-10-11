@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // The + operator can do addition or string concatenation.
+
+        // If both operands are numbers → Addition.
+        // If either operand is a string → Both become strings and are joined.
+        let a = 5
+        let b ="Harsh"
+        console.log(a+b) // 5Harsh
+        b = 'a'
+        console.log((a+b)) //5a
+
+        let first = "23"
+        let num=5
+        let secound = '3'
+        console.log(first+num) //233
+        console.log(num+first) //323
+        console.log(num+secound) //53
+
+        console.log("10"-5) //5
+        console.log(5-"10") //-5
+        console.log("5"-"2") //3
+        console.log("5"*5) // 25
+        console.log("Harsh" - 5) // Nan
+        console.log([1,2] + [3,4]) // "1,23,4"--string typeof
+
+        console.log("10" + 2 + 3) //1023
+        console.log(10 + 2 + "3"); //123
+
+        // + loves strings → joins values together.
+        // -, *, /, % hate strings → they first try to convert strings into numbers. If conversion fails, the result is NaN.
+    </script>
+</body>
+</html>

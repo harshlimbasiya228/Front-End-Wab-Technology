@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+     <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <h1 id="myh1">Hi, i am jquary</h1>
+    <img id="myi" src="./devloperimg.png" height="300px"  style="margin-left: 450px;"><br />
+    <input type="text" id="myinput">
+    <p class="data"></p>
+     <button id="mybtn">click</button>
+
+     <ul id="myul">
+        <li>Rajkot</li>
+         <li>Vadodra</li>
+          <li id="mycity">surat</li>
+           <li>jamnagar</li>
+            <li>Gandhinagar</li>
+     </ul>
+
+     <table border="2px" style="margin-left: 400px;" id="mt" class="tab">
+        <tr>
+            <th>
+                city
+            </th>
+            <th>
+                pincode
+            </th>
+            <th>
+                location
+            </th>
+        </tr>
+        <tr>
+            <td>rajkot</td>
+            <td>47237375</td>
+            <td>gihjg</td>
+        </tr>
+         <tr>
+            <td>rajkot</td>
+            <td>47237375</td>
+            <td>gihjg</td>
+        </tr>
+         <tr>
+            <td>rajkot</td>
+            <td>47237375</td>
+            <td>gihjg</td>
+        </tr>
+         <tr>
+            <td>rajkot</td>
+            <td>47237375</td>
+            <td>gihjg</td>
+        </tr>
+     </table>
+     <button id="mybtn1">click remove sibling</button>
+
+     <p id="pera" class="pab">Lorem ipsum dolor sit amet consectetur, zadipisicing elit. Odio odit asperiores totam, officia ea delectus.</p>
+     <button id="mybtn2">hide</button>
+     <button id="mybtn4">show</button>
+     <br />
+     <div id="mydiv">
+        <h1>change background</h1><br/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat corporis aliquam impedit eos error veritatis quae commodi at facere dolorem.</p>
+     </div>
+     <button id="bgcol">change color</button><br/>
+     <input type ="text" placeholder="input-1" style="margin-bottom: 10px;">
+      <input type ="text" placeholder="input-2"><br>
+      <button id="btnchange" class="focusInput">change input btn</button><br/><br/>
+
+      <h3>Darshan enrollment no when user leave the textbox(blue)</h3><br>
+      <input type="text" id="enro" placeholder="enter a enro number"><br>
+     <span id="enrollError" style="color:red; display:none;">Invalid Enrollment Number format</span>
+     <br>
+     <br>
+     <div class="forch" style="margin-left: 50px; align-items: center;">
+        <h2>student registration form</h2>
+        <form id="ss">
+    Name: <input type="text" id="sn"><br>
+    Email: <input type="email" id="se"><br>
+    Password: <input type="password" id="sp"><br>
+    <button type="submit">Register</button>
+</form>
+<p id="formError" style="color:red;"></p>
+     </div>
+     
+    <script>
+        //jq-1
+        // $("#mybtn").click(()=>{
+        //     $("#myh1").toggle();
+        // });
+        // $("#mybtn").click(()=>{
+        //      $("#myh1").fadeToggle(1000);
+        //  });
+
+        //jq-2
+        // $("#mybtn").click(()=>{
+        //     $("#myi").slideUp();
+        // });
+        // $("#mybtn").click(()=>{
+        //     $("#myi").slideToggle();
+        // });
+        //j3-3
+        // $("#mybtn").click(()=>{
+        //     $("#myh1").text("hi i ma fine thank you!");
+        // });
+
+        //j4-4
+        // $("#mybtn").click(()=>{
+        //    $(".data").text( $("#myinput").val());
+        // });
+
+        //j4-5
+        // $("#mybtn").click(()=>{
+        //    $("#myul").append( "<li>"+$("#myinput").val()+"</li>");
+        // });
+        //js-6
+        // $("#mybtn1").click(()=>{
+        //    $("#mt").append( "<tr><td>"+$("#myinput").val()+"</td></tr>");
+        // });
+
+
+        // $("#mybtn1").click(()=>{
+        //    $("#mycity").siblings().hide();
+        // });
+        // $("#mybtn2").click(()=>{
+        //    $("#pera").hide();
+        // });
+
+        //  $("#mybtn2").click(()=>{
+        //    $(".pab,.tab").hide();
+        // });
+        //  $("#mybtn4").click(()=>{
+        //    $(".pab,.tab").show();
+        // });
+
+        //  $("#bgcol").click(()=>{
+        //    $("#mydiv").css("background-color","purple")
+        //     $("#mydiv").css("font-size","55px")
+        // });
+        // $("#mybtn2").click(()=>{
+        //    $("#mydiv").hide()
+        // });
+        //  $("#bgcol").click(()=>{
+        //    $("p").css("background-color","purple")
+        //     $("p").css("font-size","55px")
+        // }); 
+        // $("#btnchange").click(()=>{
+        //     $("input").css("background-color","red")
+        // });
+
+        
+        // $("#btnchange").focus(()=>{
+        //     $("input").css("background-color","red")
+        // }).blur(()=>{
+        //      $("input").css("background-color","blue")
+        // });
+
+        
+        //  $("#bgcol").mouseenter(()=>{
+        //    $("p").css("background-color","red")
+        // }); 
+        // $("#bgcol").mouseleave(()=>{
+        //    $("p").css("background-color","orange")
+        // });
+
+        
+        // $(document).ready(()=>{
+        //     $(document).mousemove((event)=>{
+        //         console.log("X cordinate :"+event.pageX +" y cordinate :"+event.pageY)
+        //     });
+        // });
+
+        
+        // $(document).ready(()=>{
+        //     $("#enro").blur(()=>{
+        //         let pattrne= /^\d{11}$/;
+        //         let enrolval = $("#enro").val();
+
+        //         if(pattrne.test(enrolval)){
+        //             $("#enro").css("border", "2px solid green")
+        //             $("#enrollError").hide();
+        //         }else{
+        //             $("#enro").css("border", "2px solid red")
+        //             $("#enrollError").show();
+        //         }
+        //     });
+        // });
+
+        // //jq-18
+        // $(document).ready(()=>{
+        //     $("#ss").submit((event)=>{
+        //         let isvalid=true;
+        //         let error="";
+        //         if($("#sn").val()===""){
+        //             error+="name is requaired.<br>";
+        //             isvalid=false;
+        //         }
+        //         let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        //         if (!emailRegex.test($("#se").val())) {
+        //             error += "Valid Email is required.<br>";
+        //             isvalid = false;
+        //         }
+
+        //         if ($("#sp").val().length < 4) {
+        //          error += "Password must be at least 4 characters long.<br>";
+        //             isvalid = false;
+        //         }
+
+        //         if (!isvalid) {
+        //             event.preventDefault(); 
+        //             $("#formError").html(error);
+        //         } else {
+        //             event.preventDefault(); 
+        //             $("#formError").html("Form submitted successfully!").css("color", "green");
+        //         }
+        //     })
+        // });
+    </script>
+
+</body>
+</html>

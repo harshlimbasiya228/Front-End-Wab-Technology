@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #bod {
+            margin-left: 20%;
+            padding: 40px;
+        }
+        #t1 {
+            margin-top: 20px;
+            width: 50%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+    </style>
+</head>
+<body id="bod">
+    <h1 style="margin-left: 20%;padding: 40px;">Student CRUD</h1>
+    
+        <label for="">Student Name</label>
+        <input type="text" id="n">
+        <button id="add" onclick="add()">Add</button>
+         <button id="update" onclick="updatestudent()" >Update</button>
+
+         <table id="t1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                 <th>Name</th>
+                  <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbo">
+
+        </tbody>
+    </table>
+   
+   
+    <script>
+        let a=[]
+        let e_index=-1;
+        function add(){
+           name =  document.getElementById("n").value
+            a.push(name);
+            name_inp='';
+            display();
+        }
+
+        function display(){
+            let temp=''
+            for(let index=0;index<a.length;index++){
+                 temp += `
+                 <tr>
+                    <td>${index+1}</td>
+                    <td>${a[index]}</td>
+                    <td><button type="button" onclick="edit(${index})">Edit</button>   
+                        <button type="button" onclick="delet(${index})">Delete</button>
+                        </td>          
+                   </tr> `
+            }
+
+            document.getElementById("tbo").innerHTML = temp
+        }
+        function delet(index){
+            
+            a.splice(index,1);
+            display();
+        }
+        function edit(index){
+            document.getElementById("n").value = a[index];
+            e_index=index;
+        }
+        function updatestudent(){
+             let name_inp = document.getElementById("n");
+             let update_name = name_inp.value;
+
+             if(e_index != -1){
+                a[e_index] = update_name;      
+                name_inp.value='';
+                e_index=-1
+                display();
+             }
+        }
+    </script>
+</body>
+</html>

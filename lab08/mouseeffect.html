@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#di1{
+    height:200px;
+    width:300px;
+    background-color: antiquewhite;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+</style>
+<body>
+    <div id="di1">
+        event
+    </div>
+    <script>
+        di1=document.getElementById("di1")
+        di1.addEventListener("click",function(){
+            di1.innerHTML="Mouse Click"
+        })
+        di1.addEventListener("dbclick",function(){
+            di1.innerHTML="Mouse dbClick"
+        })
+        di1.addEventListener("mousemove",function(){
+            di1.innerHTML="Mouse move"
+        })
+       di1.addEventListner("contextmenu",function(e){
+           e.preventDefault();
+            di1.innerHtml="Mouse right";
+        })
+        
+    </script>
+</body>
+</html>

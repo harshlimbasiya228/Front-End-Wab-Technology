@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+    <script>
+      //includes
+      let a = [10, 20, 30, 40, 50];
+      let ans = a.includes(30);
+      console.log("includs :", ans);
+
+      // ans=a.find(45);
+      // console.log("find:",ans); type error number 45 is not a function
+      //find method return first occurance
+
+      stu = [
+        { name: "harsh",rno: 101,spi: 9.0},
+        { name: "raj", rno: 102, spi: 9.50 },
+        { name: "hardik", rno: 103, spi: 4.39 },
+        { name: "modi", rno: 104, spi:2.00 },
+      ];
+        // ans=a.find(temp => temp.rno=102);
+        ans=a.find(temp => temp.spi>8.0); //return one object only
+        ans=a.filter(temp => temp.spi > 6.50); // return all posible combination
+        console.log(ans);
+
+        //some and every method - return true / false
+         ans=a.some(temp => temp.spi >9);
+         console.log("some : ",ans);
+         ans=a.every(temp => temp.spi >5);
+         console.log("every : ",ans);
+
+         //map method
+         arr = [1,2,3,4,5,6,7];
+        ans=arr.map(temp => temp* temp);
+       ans=stu.map(temp =>{
+            return `<li>`+temp.name+`</li>`
+        });
+        document.write(ans.join(""));
+    </script>
+    </ul>
+  </body>
+</html>

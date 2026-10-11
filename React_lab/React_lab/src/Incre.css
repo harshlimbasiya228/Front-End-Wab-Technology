@@ -1,0 +1,140 @@
+.title{
+      background-color:#e63946 ;
+      color: white;
+     text-align: center;
+     margin: 15px 0px 0px 0px;
+      height: 100px;
+    }
+    .nav a{
+      color: #42a5f5;
+       text-decoration: none;   
+    }
+    .nav a:hover{
+      color: #f72585;
+     
+    }
+    .nav button{
+      height: 4vh;
+      border-radius: 15px;
+      background: linear-gradient(#80ed99,#00f5d4,#c7f9cc);
+      border: 2px solid green;
+    }
+    .nav2 a{
+      color: #2a9d8f;
+    }
+    .nav2 a:hover{
+      color: #9800fe;
+     
+    }
+    .nav2 hr{
+      border: 2px solid #a8dadc;
+    }
+    .fullmain{
+      background-color: #f1faee;
+      margin: -15px 0px -16px 0px;
+    }
+    .startcontant h2{
+      color: #03357b;
+    }
+    .startcontant p{
+      color: #457b9d;
+      text-align:center ;
+      font-family: cursive;
+      font-size: 20px;
+    }
+    .startcontant p:hover{
+      color: #00b4d8;
+      transition: all 1s;
+    }
+    .firstpra{
+      color: #03357b;
+    }
+    .container img{
+     border-radius: 15px;
+     box-shadow:8px 8px 14px #03357b;
+      display: block;
+         margin: auto;
+          width: 60%
+    }
+    .facts h2{
+      color:#9d4edd ;
+    }
+    .facts p{
+      color: #03357b;
+      font-family: cursive;
+      font-size: 15px;
+    }
+    .toucat h2{
+      color:#9d4edd;
+    }
+    .toucat ul{
+      color:#03357b;
+      font-family: cursive;
+      font-size: 15px;
+    }
+    .planlist h2{
+       color:#9d4edd;
+    }
+    .planlist ol{
+       color:#03357b;
+      font-family: cursive;
+      font-size: 15px;
+    }
+    .planlist hr{
+      border: 2px solid #75bb73;
+    }
+    .footer{
+      text-align: center;
+      background-color: #a8dadc;
+      margin: -12px 0px 0px 0px;
+    }
+    .footer h4{
+      color: #e408f4;
+    }
+    .footer h4:hover{
+      color: #9800fe;
+      text-shadow: 10px 10px 14px #2548f7;
+      font-family: cursive;
+      transition: all 1s;
+    }
+    .footer a{
+      color: #03357b;
+    }
+    .footer a:hover{
+      color: red;
+      transition: all 1s;
+    }
+    .footer p{
+      color: #03357b;
+    }
+    .footer p:hover{
+      color: red;
+      transition: all 1s;
+    }
+    @media screen and (max-width:668px) {
+      img{
+        max-width: 100%;
+        height: auto;
+        width: 90%;
+      }
+     .nav nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+     }
+     .nav button{
+      height: auto;
+      width: 50%;
+      padding: 8px 20px;
+      font-size: 16px;
+     }
+     .title{
+      height: auto;
+      padding-bottom: 10px;
+     }
+     .nav2 nav{
+      text-align: center;
+      font-size: 17px;
+     }
+    }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        student1 ={
+            name:"Harsh Limbasiya",
+            rno:122,
+            sem:"CSE-3rd",
+            address:"dmfjcmf"
+        };
+        student2 ={
+            name:"rutnik Limbasiya",
+            city:"rajkot"
+        }
+        student3={...student2,...student1,name:"raj"};
+        console.log(student3)
+
+        let arr=[1,2,3,4,5,6,7];
+        let arr2=[8,9,10];
+        let arr3=[...arr,999,...arr2];
+        console.log(arr3)
+
+        //class in js
+        class flipcart{
+            constructor(product,price,model){
+                this.product=product;
+                this.price=price;
+                this.model=model;
+            }
+            dispaly(){
+                console.log("product : "+this.product);
+                console.log("price: "+this.price);
+                console.log("model: "+this.model);
+            }
+        }
+        temp=new flipcart("pendrive",500,"i-3645")
+        temp.dispaly()
+
+
+        //for-in-loop-Array
+        // let num1=[12,23,45,32,43];
+        // for(temp in num1){
+        //     console.log(temp);
+        // }
+        // for(temp of num1){
+        //     console.log(temp);
+        // }
+
+        //for-of-loop-object
+
+        // for(temp in student1){
+        //     console.log(temp);
+        // }
+        // for(temp of student1){
+        //     console.log(temp);
+        // }
+
+        //Destructuring-object
+        // const {name,rno,...rest}=student2
+        // console.log("name",name);
+        // console.log("rno",rno);
+        // console.log("rest :",rest);
+        //array
+        let [a1,a2,a3,...a5]=arr
+        a1=5678
+        console.log(a1);
+         console.log(a2);
+          console.log(a3);
+        //   console.log("rest:",a5);
+
+
+
+    </script>
+</body>
+</html>

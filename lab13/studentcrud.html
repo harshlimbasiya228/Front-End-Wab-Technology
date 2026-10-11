@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #bod {
+        margin-left: 20%;
+        padding: 40px;
+      }
+
+      #t1 {
+        margin-top: 20px;
+        width: 50%;
+        text-align: left;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+    </style>
+  </head>
+
+  <body id="bod">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <h1 style="margin-left: 20%; padding: 40px">Student CRUD</h1>
+
+    <label for="">Student Name</label>
+    <input type="text" id="name" />
+    <label for="">Roll No</label>
+    <input type="number" id="rno" />
+    <label for="">Sem</label>
+    <input type="number" id="sem" />
+    <button id="add">Add</button>
+    <button id="update">Update</button>
+
+    <table id="t1">
+      <thead>
+        <tr>
+          <th>Rno</th>
+          <th>Name</th>
+          <th>Sem</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbo"></tbody>
+    </table>
+
+    <script>
+      let a = [];
+      let e_index = -1;
+      $("#add").click(() => {
+        let student = {
+          name: $("#name").val(),
+          rno: $("#rno").val(),
+          sem: $("#sem").val(),
+        };
+        a.push(student);
+        display();
+      });
+
+      function display() {
+        let temp = "";
+        for (let index = 0; index < a.length; index++) {
+          temp += `
+                <tr>
+                   <td>${a[index].rno}</td>
+                    <td>${a[index].name}</td>                   
+                    <td>${a[index].sem}</td>
+                    <td><button id="ebtn${index}" type="button">Edit</button>   
+                        <button id="dbtn${index}" type="button">Delete</button>
+                    </td>                  
+                </tr>
+                `;
+        }
+
+        $("#tbo").html(temp);
+
+        for (let i = 0; i < a.length; i++) {
+          //delete
+          $("#dbtn" + i).click(() => {
+            a.splice(i, 1);
+            display();
+          });
+
+          //edit
+          $("#ebtn" + i).click(() => {
+            $("#name").val(a[i].name);
+            $("#rno").val(a[i].rno);
+            $("#sem").val(a[i].sem);
+            e_index = i;
+          });
+        }
+      }
+
+      $("#update").click(() => {
+        if (e_index != -1) {
+          a[e_index].name = $("#name").val();
+          a[e_index].rno = $("#rno").val();
+          a[e_index].sem = $("#sem").val();
+          display();
+
+          $("#name").val("");
+          $("#rno").val("");
+          $("#sem").val("");
+          e_index = -1;
+        }
+      });
+    </script>
+  </body>
+</html>

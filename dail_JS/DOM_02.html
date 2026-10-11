@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div style="width :40px; float: left; border: 1px solid red;">
+            <button onclick="changeAll(true)">Check</button>
+            <button onclick="changeAll(false)">Check</button>
+        <br />
+            <script>
+                for(i=101;i<=265;i++){
+                    document.write(
+                        `<input onclick='changeAbPr()' type='checkbox' value='${i}'/> ${i} <br />`
+                    );
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

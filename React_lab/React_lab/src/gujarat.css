@@ -1,0 +1,113 @@
+.title{
+        background-color: #ffd6ff;
+        color: black;
+        text-align: center;
+        padding-top: 6px;
+        height: 10vh;
+        font-family: cursive;       
+      }
+     .main{
+       background-color: #c0c8ff;
+       margin-top: -20px;
+     }
+     .nevigation{
+       padding-top: 10px;
+       background-color: #e7c6ff;
+     }
+     .nevigation button{
+       height: 4vh;
+      border-radius: 15px;
+      background: linear-gradient(#80ed99,#00f5d4,#c7f9cc);
+      border: 2px solid black;
+        height: 4vh;
+        margin-left: 4px;
+        text-decoration: none;
+     }
+     .nevigation hr{
+      border: 2px solid black;
+     }
+     .nevigation a{
+        color: black;
+       text-decoration: none;
+      }
+      .nevigation a:hover{
+        color: #0b9af3;
+      }
+     .formality h2{
+       color: #5a189a;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+      padding: 10px 0px 5px 5px;
+      }
+      .formality Marquee{
+        color: #014f86;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+      }
+      .formality Marquee:hover{
+        color: orangered;
+      }
+     .culture p{
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     }
+     .kutch h3{
+       color: #3f3fcf;
+     }
+     .kutch p,ul{
+      font-family: cursive;
+      color: black;
+     }
+     .kutch img{
+      border: 2px solid black;
+       border-radius: 15px;
+     box-shadow:8px 8px 14px #06459c;
+     }
+     .kutch h4{
+     color: #022e6b;
+     }
+     .gir h3{
+      color: #3f3fcf;
+     }
+     .gir p{
+      color: rgb(168, 10, 196);
+     }
+     .gir img{
+      border: 2px solid black;
+       border-radius: 15px;
+     box-shadow:8px 8px 14px #06459c;
+     }
+     .gir td{
+      padding-left: 25px;
+     }
+     div h3{
+      color: #3f3fcf;
+     }
+     div ol{
+      font-size: medium;
+      font-family: cursive;
+     }
+     div img{
+      border: 2px solid black;
+       border-radius: 15px;
+     box-shadow:8px 8px 14px #06459c;
+     }
+     div p{
+      color: rgb(104, 53, 193);
+     }
+     div td{
+      padding-left: 25px;
+     }
+     .footer a{
+        color: #014f86;
+      }
+      .footer a:hover{
+        color: rgb(225, 18, 18);
+      }
+      .footer{
+       background-color: #a9c1f5;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       text-align: center;
+       padding-top: 10px;
+       margin-top: -8px;
+      }
+      .footer p{
+        color: rgb(151, 4, 151);
+      }

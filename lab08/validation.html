@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: rgb(245, 0, 0);
+            font-size: 14px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Student Regestration Form</h2>
+       <form id="regform" >
+    <table align="center" cellspacing="20">
+                <tr>
+                    <td align="right"><label for="fn" >Full Name:</label></td>
+                    <td><input type="text" id="fn" placeholder="Enter Name" required></td>
+                    <td><span id="fner"></span></td>
+                </tr>
+                
+                <tr>
+                    <td align="right"><label for="m">Mobile No:</label></td>
+                    <td><input type="tel" pattern="[0-9]{10}" id="m"></td>
+                    <td><span id="mer"></span></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="ad">Address:</label></td>
+                    <td><textarea id="ad" rows="7" cols="49"></textarea></td>
+                    <td><span id="ader"></span></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n">Nationality:</label></td>
+                    <td><input type="text" id="n"></td>
+                    <td><span id="ner"></span></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="d">Date Of Birth:</label></td>
+                    <td><input type="date" id="d"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="g">Gender:</label></td>
+                    <td>
+                        <input type="radio" name="Gender" value="m" id="g"><label>Male</label>
+                        <input type="radio" name="Gender" value="f" id="g"><label>Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="hd">Highest Degree:</label></td>
+                    <td><select id="hd">
+                        <option>BBA</option>
+                        <option>BCA</option>
+                        <option>B.TECH</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="py">Passing Year:</label></td>
+                    <td>
+                        <select id="py">
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                            <option>2017</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="pass">password</label></td>
+                    <td><input type="password" id="pass"></td>
+                    <td><span id="passer"></span></td>
+                </tr>
+                <tr>
+                    <td align="right"><button type="submit">submit</button></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+    </table>
+    </form>
+        <script>
+           
+           const form = document.getElementById('regform');
+           function validation(){
+            form.addEventListener('submit',function(event){
+            event.preventDefault();
+            let isvalid=true;
+           
+            document.getElementById("fner").innerHTML="";
+             document.getElementById("mer").innerHTML="";
+            document.getElementById("ader").innerHTML="";
+            document.getElementById("ner").innerHTML="";
+             document.getElementById("passer").innerHTML="";
+            
+           let name=document.getElementById("fn").value
+           let mobail=document.getElementById("m").value
+           let addr=document.getElementById("ad").value
+           let Nationality=document.getElementById("n").value
+           let  password=document.getElementById("pass").value
+
+           let  n_pattren = /^[a-zA-Z ]+$/
+           let m_pattren = /^[0-9]{10}$/
+           let a_pattren = /^[a-zA-Z0-9{1,9}]+$/
+           let na_pattren = /^[a-zA-Z]+$/
+           let pas_pattren =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+             if(!n_pattren.test(name)){
+               document.getElementById("fner").innerHTML="<b>Enter a valid First Name !</b>"
+                isvalid=false;
+            }
+            if(!m_pattren.test(mobail)){
+                 document.getElementById("mer").innerHTML="<b>Enter a valid mobail num !</b>"
+                isvalid=false;
+            }
+            if(!a_pattren.test(addr)){
+               document.getElementById("ader").innerHTML="<b>Enter a valid address !</b>"
+                isvalid=false;
+            }
+             if(!na_pattren.test(Nationality)){
+                 document.getElementById("ner").innerHTML="<b>Enter a valid Nationality !</b>"
+                isvalid=false;
+            }
+            if(!pas_pattren.test(password)){
+               document.getElementById("passer").innerHTML="<b>Enter a valid password !</b>"
+                isvalid=false;
+            }
+            if (isvalid) {
+                alert("Form submitted successfully!");
+                
+            }
+           });
+           }
+           validation();
+        </script>
+    
+</body>
+</html>

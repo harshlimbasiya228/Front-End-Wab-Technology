@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+        <form  onsubmit=valid(event)>
+    <table align="center" cellspacing="20">
+        <caption align="center"><h2>Student Registration</h2></caption>
+                <tr>
+                    <td align="right"><label for="fn" >Full Name:</label></td>
+                    <td><input type="text" id="fn" placeholder="Enter Name" required></td>
+                </tr>
+                
+                <tr>
+                    <td align="right"><label for="m">Mobile No:</label></td>
+                    <td><input type="tel" pattern="[0-9]{10}" id="m"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="ad">Address:</label></td>
+                    <td><textarea id="ad" rows="7" cols="49"></textarea></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n">Nationality:</label></td>
+                    <td><input type="text" id="n"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="d">Date Of Birth:</label></td>
+                    <td><input type="date" id="d"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="g">Gender:</label></td>
+                    <td>
+                        <input type="radio" name="Gender" value="m" id="g"><label>Male</label>
+                        <input type="radio" name="Gender" value="f" id="g"><label>Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="hd">Highest Degree:</label></td>
+                    <td><select id="hd">
+                        <option>BBA</option>
+                        <option>BCA</option>
+                        <option>B.TECH</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="py">Passing Year:</label></td>
+                    <td>
+                        <select id="py">
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                            <option>2017</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="pass">password</label></td>
+                    <td><input type="password" id="pass"></td>
+                </tr>
+                <tr>
+                    <td align="right"><button type="submit">submit</button></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+    </table>
+    </form>
+    <script>
+
+        function valid(e) {
+            e.preventDefault()
+            name=document.getElementById("fn").value
+            mobail=document.getElementById("m").value
+            addr=document.getElementById("ad").value
+            Nationality=document.getElementById("n").value
+            dob=document.getElementById("d").value
+            password=document.getElementById("pass").value
+
+            n_pattren = /^[a-zA-Z]+$/
+            m_pattren = /^[0-9]{10}$/
+            a_pattren = /^[a-zA-Z0-9{1,9}]+$/
+            na_pattren = /^[a-zA-Z]+$/
+            pas_pattren = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
+
+            if(!n_pattren.test(name)){
+                alert("no valid text")
+            }
+            if(!m_pattren.test(mobail)){
+                alert("no valid number")
+            }
+            if(!a_pattren.test(addr)){
+                alert("no valid add")
+            }
+             if(!na_pattren.test(Nationality)){
+                alert("no valid text")
+            }
+            if(!pas_pattren.test(password)){
+                alert("no valid password")
+            }
+        }
+    </script>
+</body>
+</html>
+   

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1=parseInt (prompt("enter a number n1 :"))
+        let n2=parseInt (prompt("enter a number n2 :"))
+        let operation =  prompt("enter a operation :")
+        let result
+        if(operation=='+'){
+            result=n1+n2
+        }else if(operation=='-'){
+            result=n1-n2
+        }else if(operation=='*'){
+            result=n1*n2
+        }else if(operation=='/'){
+            result=n1/n2
+        }else{
+            alert("enter a valid operation")
+        }
+       // alert(result)
+       document.write(result)
+    </script>
+</body>
+</html>
